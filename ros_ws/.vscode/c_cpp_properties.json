@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/opt/ros/melodic/include/**",
+                "/home/r3v334/smartcar_ws/src/scan_tools/laser_ortho_projector/include/**",
+                "/home/r3v334/smartcar_ws/src/laser_scan_matcher/include/**",
+                "/home/r3v334/smartcar_ws/src/scan_tools/laser_scan_sparsifier/include/**",
+                "/home/r3v334/smartcar_ws/src/scan_tools/laser_scan_splitter/include/**",
+                "/home/r3v334/smartcar_ws/src/scan_tools/ncd_parser/include/**",
+                "/home/r3v334/smartcar_ws/src/scan_tools/polar_scan_matcher/include/**",
+                "/home/r3v334/smartcar_ws/src/rf2o_laser_odometry/include/**",
+                "/home/r3v334/smartcar_ws/src/scan_tools/scan_to_cloud_converter/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14"
+        }
+    ],
+    "version": 4
+}

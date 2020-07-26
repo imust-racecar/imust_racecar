@@ -1,0 +1,68 @@
+digraph G {
+node [shape=box];
+"base_footprint" [label="base_footprint"];
+"base_link" [label="base_link"];
+"chassis" [label="chassis"];
+"left_battery_offset" [label="left_battery_offset"];
+"left_battery" [label="left_battery"];
+"right_battery_offset" [label="right_battery_offset"];
+"right_battery" [label="right_battery"];
+"left_steering_link" [label="left_steering_link"];
+"left_front_axle_carrier" [label="left_front_axle_carrier"];
+"left_front_wheel" [label="left_front_wheel"];
+"left_rear_axle_carrier" [label="left_rear_axle_carrier"];
+"left_rear_wheel" [label="left_rear_wheel"];
+"platform_link" [label="platform_link"];
+"camera_link" [label="camera_link"];
+"imu_link" [label="imu_link"];
+"lidar_platform_link" [label="lidar_platform_link"];
+"laser_link" [label="laser_link"];
+"right_steering_link" [label="right_steering_link"];
+"right_front_axle_carrier" [label="right_front_axle_carrier"];
+"right_front_wheel" [label="right_front_wheel"];
+"right_rear_axle_carrier" [label="right_rear_axle_carrier"];
+"right_rear_wheel" [label="right_rear_wheel"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_footprint" -> "base_footprint_to_base_link" [label="xyz: 0 0 0.1075 \nrpy: 0 -0 0"]
+"base_footprint_to_base_link" -> "base_link"
+"base_link" -> "base_link_to_chassis" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"base_link_to_chassis" -> "chassis"
+"chassis" -> "chassis_to_left_battery" [label="xyz: -0.025 0.0325 0 \nrpy: 0.349066 -0 0"]
+"chassis_to_left_battery" -> "left_battery_offset"
+"left_battery_offset" -> "offset_to_left_battery" [label="xyz: 0 0.0235 -0.008 \nrpy: 0 -0 0"]
+"offset_to_left_battery" -> "left_battery"
+"chassis" -> "chassis_to_right_battery" [label="xyz: -0.025 -0.0325 0 \nrpy: -0.349066 0 0"]
+"chassis_to_right_battery" -> "right_battery_offset"
+"right_battery_offset" -> "offset_to_right_battery" [label="xyz: 0 -0.0235 -0.008 \nrpy: 0 -0 0"]
+"offset_to_right_battery" -> "right_battery"
+"chassis" -> "left_front_shock" [label="xyz: 0.1675 0.1525 -0.0235 \nrpy: 0 -0 0"]
+"left_front_shock" -> "left_steering_link"
+"left_steering_link" -> "left_steering_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"left_steering_joint" -> "left_front_axle_carrier"
+"left_front_axle_carrier" -> "left_front_axle" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"left_front_axle" -> "left_front_wheel"
+"chassis" -> "left_rear_shock" [label="xyz: -0.1675 0.1525 -0.0235 \nrpy: 0 -0 0"]
+"left_rear_shock" -> "left_rear_axle_carrier"
+"left_rear_axle_carrier" -> "left_rear_axle" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"left_rear_axle" -> "left_rear_wheel"
+"chassis" -> "platform_joint" [label="xyz: 0 0 0.08 \nrpy: 0 -0 0"]
+"platform_joint" -> "platform_link"
+"platform_link" -> "camera_joint" [label="xyz: 0.16 0 0.05 \nrpy: 0 -0 0"]
+"camera_joint" -> "camera_link"
+"platform_link" -> "imu_joint" [label="xyz: 0.16 0 0.015 \nrpy: 0 -0 0"]
+"imu_joint" -> "imu_link"
+"platform_link" -> "lidar_platform_joint" [label="xyz: 0.08 0 0.08 \nrpy: 0 -0 0"]
+"lidar_platform_joint" -> "lidar_platform_link"
+"lidar_platform_link" -> "lidar_joint" [label="xyz: 0 0 0.03 \nrpy: 0 -0 0"]
+"lidar_joint" -> "laser_link"
+"chassis" -> "right_front_shock" [label="xyz: 0.1675 -0.1525 -0.0235 \nrpy: 0 -0 0"]
+"right_front_shock" -> "right_steering_link"
+"right_steering_link" -> "right_steering_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"right_steering_joint" -> "right_front_axle_carrier"
+"right_front_axle_carrier" -> "right_front_axle" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"right_front_axle" -> "right_front_wheel"
+"chassis" -> "right_rear_shock" [label="xyz: -0.1675 -0.1525 -0.0235 \nrpy: 0 -0 0"]
+"right_rear_shock" -> "right_rear_axle_carrier"
+"right_rear_axle_carrier" -> "right_rear_axle" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"right_rear_axle" -> "right_rear_wheel"
+}

@@ -6,12 +6,14 @@
 * [AMCL](./notes/AMCL.md)
 
 ## TODO
-* [ ] 移植 纯路径追踪
-* [ ] 添加 rf2o
-* [ ] AMCL 调参
+* [x] 移植 纯路径追踪
+* [x] 添加 rf2o (效果较差)
+* [x] 添加锥桶
 * [ ] 把 teb 和 纯路径追踪 结合
-* [ ] MPC
+* [ ] 整理代码
+* [ ] 进一步的思路
 
 ## 资料
 * [Hypha-ROS](https://github.com/Hypha-ROS/hypharos_racecar)
 * [f1tenth](https://github.com/f1tenth-dev/pure_pursuit)
+* [AMCL](https://www.guyuehome.com/7721)
