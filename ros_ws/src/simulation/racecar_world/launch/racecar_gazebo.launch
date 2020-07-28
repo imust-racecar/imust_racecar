@@ -18,7 +18,7 @@
         	<arg name="paused" value="$(arg paused)"/>
         	<arg name="use_sim_time" value="$(arg use_sim_time)"/>
         	<arg name="headless" value="$(arg headless)"/>
-		<arg name="world_name" value="$(find racecar_world)/worlds/racetrack.world"/>
+		<arg name="world_name" value="$(find racecar_world)/worlds/test.world"/>
                <!-- 此处改成参赛者放置.world文件的地址-->
     	</include>
 
