@@ -32,6 +32,11 @@ class VESCSimDriver:
         
         if math.fabs(data.angular.z) > 1e-3:
             radius = L / math.tan(data.angular.z)
+            maxv = math.sqrt(10.5 * math.fabs(radius)) * 40.0 / 3.0
+            if math.fabs(v) > maxv:
+                if v < 0: v = -maxv
+                else: v = maxv
+
             left_wheel_angle = math.atan(L / (radius - d / 2.0))
             right_wheel_angle = math.atan(L / (radius + d / 2.0))
             

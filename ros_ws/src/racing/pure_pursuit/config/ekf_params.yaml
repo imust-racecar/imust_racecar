@@ -1,4 +1,4 @@
-frequency: 50
+frequency: 100
 sensor_timeout: 0.02
 two_d_mode: true
 transform_time_offset: 0.0001
@@ -25,14 +25,14 @@ world_frame: /odom           # Defaults to the value of odom_frame if unspecifie
 # odom1, twist0, twist1, imu0, imu1, imu2, etc. The value should be the topic name. These parameters obviously have no
 # default values, and must be specified.
 
-odom0: /racecar/gazebo_odom
-odom0_config: [true, true, false,
-                false, false, false,
-                false, false, false,
-                false, false, false,
-                false, false, false]
-odom0_queue_size: 1
-odom0_relative: false
+# odom0: /racecar/gazebo_odom
+# odom0_config: [true, true, false,
+#                 false, false, false,
+#                 false, false, false,
+#                 false, false, false,
+#                 false, false, false]
+# odom0_queue_size: 1
+# odom0_relative: false
 
 
 

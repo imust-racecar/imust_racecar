@@ -16,7 +16,7 @@
         <rosparam file="$(find pure_pursuit)/config/global_costmap_params.yaml" command="load" />
 
         <param name="base_global_planner" value="global_planner/GlobalPlanner" />
-        <param name="planner_frequency" value="10.0" />
+        <param name="planner_frequency" value="20.0" />
         <param name="planner_patience" value="10.0" />
         
         <param name="controller_frequency" value="0.001" />
@@ -28,24 +28,29 @@
 
     <node pkg="pure_pursuit" name="pure_pursuit_controller" type="controller" respawn="false" output="screen">
         
-        <param name="controller_freq" value="40" />
-
+        <param name="controller_freq" value="100" />
+<!-- 3.5 0.8 4.0 1.0 3.0 0.8 -->
+<!-- 3.5 false 重开 35 -->
+<!-- 3.5 1.5 30 0.4 2.0 -->
+<!-- 3.5 1.5 0.4 40 -->
+<!-- 3.5 2.5 0.4 3.0 2.0 0.8 true true -->
         <!-- speed -->
         <param name="can_speed_change" value="true" />
-        <param name="baseSpeed" value="2.5" />
-        <param name="min_speed" value="1.5" />
-        <param name="max_speed" value="10.0" />
-        <param name="rush_speed" value="5.0" />
-        <param name="rush_dist" value="6.0" />
-        <param name="acc_limit" value="0.15" />
-        <param name="acc_weight" value="2.0" />
-        <param name="back_weight" value="1.0" />
-
+        <param name="baseSpeed" value="3.5" />
+        <param name="min_speed" value="3.5" />
+        <param name="max_speed" value="6.0" />
+        <param name="rush_speed" value="6.0" />
+        <param name="rush_dist" value="3.0" />
+        <param name="acc_limit" value="0.2" />
+        <param name="acc_weight" value="3.0" />
+        <param name="back_weight" value="2.0" />
+        <param name="max_acc" value="3.0" />
+<!-- 2.5 1.5 0.4 -->
         <!-- angle -->
         <param name="baseAngle" value="0" />
 
         <!--  eta filter -->
-        <param name="eta_weight" value="0.9" />
+        <param name="eta_weight" value="0.8" />
 
         <!-- pid -->
         <param name="kp" value="0.36" /> <!-- 1.36 -->
@@ -53,9 +58,9 @@
         
         <!-- Lfw -->
         <param name="Lfw" value="0.8" />
-        <param name="can_Lfw_change" value="false" />
+        <param name="can_Lfw_change" value="true" />
         <param name="Lfw_min" value="0.6" />
-        <param name="Lfw_max" value="1.0" />
+        <param name="Lfw_max" value="1.2" />
 
         <!-- back -->
         <param name="can_back" value="false" />

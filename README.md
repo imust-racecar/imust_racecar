@@ -9,9 +9,7 @@
 * [x] 移植 纯路径追踪
 * [x] 添加 rf2o (效果较差)
 * [x] 添加锥桶
-* [ ] 把 teb 和 纯路径追踪 结合
-* [ ] 整理代码
-* [ ] 进一步的思路
+* [x] 整理代码
 
 ## 资料
 * [Hypha-ROS](https://github.com/Hypha-ROS/hypharos_racecar)

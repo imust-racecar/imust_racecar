@@ -19,6 +19,7 @@ L1Controller::L1Controller() {
     pn.param("acc_limit", acc_limit, 0.0);
     pn.param("acc_weight", acc_weight, 1.0);
     pn.param("back_weight", back_weight, 1.0);
+    pn.param("max_acc", max_acc, 2.0);
 
     // back parameter
     pn.param("can_back", canBack, false);
@@ -232,8 +233,9 @@ double L1Controller::getLfw() {
     if (!canLfwChange)
         return Lfw;
 
-    double v = odom.twist.twist.linear.x;
-    double lfw = 0.1*v*v + 1.0/controller_freq*v + 0.5;
+    double v = cmd_vel.linear.x;
+    double lfw = ceil((v - 2.5)) / 0.5 * 0.1 + Lfw_min;
+
     if (lfw < Lfw_min) lfw = Lfw_min;
     else if (lfw > Lfw_max) lfw = Lfw_max;
 
@@ -340,10 +342,6 @@ double L1Controller::getGasInput(double steeringAnge) {
     if (map_path.poses.size() * 0.05 <= rush_dist)
         return rush_speed;
 
-    int size = 50;
-    if (map_path.poses.size() < size)
-        return max_speed;
-
     static double curvature_last = 0.0;
     static bool flag_first_curv = true;
 
@@ -351,6 +349,7 @@ double L1Controller::getGasInput(double steeringAnge) {
     geometry_msgs::Point car_path_wayPt, car_path_wayPt_last;
     bool flag_first = true;
 
+    int size = 50;
     for(int i = 5; i < size; i++) {
         geometry_msgs::PoseStamped map_path_pose = map_path.poses[i];
         geometry_msgs::PoseStamped car_path_pose;
@@ -383,16 +382,23 @@ double L1Controller::getGasInput(double steeringAnge) {
     ROS_WARN("the curvature of path is %.2f", curvature);
 
     //曲率联系速度
-    double u = -0.98 * (curvature - 0.5); //curvature 是曲率(0~1.2) u是给定(0~4m/s)       //2.0
+    double u = acc_limit - curvature; //curvature 是曲率(0~1.2) u是给定(0~4m/s)       //2.0
     
-    if (u >= acc_limit)
-        u = u * acc_weight;
+    if (u > 0)
+        u *= acc_weight;
     if (u < 0)
-        u = u * back_weight;
+        u *= back_weight;
     u += baseSpeed;
 
     if (u < min_speed) u = min_speed;
     else if (u > max_speed) u = max_speed;
+
+    double delta = u - odom.twist.twist.linear.x;
+    if (delta > max_acc) {
+        u = max_acc + odom.twist.twist.linear.x;
+        if (odom.twist.twist.linear.x < 2.0)
+            u = odom.twist.twist.linear.x + max_acc * 0.5;
+    }
 
     return u;
 }
@@ -407,15 +413,17 @@ void L1Controller::controlLoopCB(const ros::TimerEvent&) {
     if(goal_received) {
         /*Estimate Steering Angle*/
         if (mode == NORMAL) {
-            double eta = getEta(carPose);  //根据位姿计算出一个double
+              //根据位姿计算出一个double
+            double eta = getEta(carPose);
+            cmd_vel.angular.z = getSteeringAngle(eta);
+            cmd_vel.linear.x = getGasInput(1.0);
             if(foundForwardPt) {
-                    cmd_vel.angular.z = getSteeringAngle(eta);
                 /*Estimate Gas Input*/
                 if(!goal_reached) {     
-                    cmd_vel.linear.x = getGasInput(1.0);
                     last_gasinput = cmd_vel.linear.x;
                 }
             } else {
+                cmd_vel.linear.x = 0;
                 ROS_ERROR("L1Controller cannot find forward point");    
             }
         } else {

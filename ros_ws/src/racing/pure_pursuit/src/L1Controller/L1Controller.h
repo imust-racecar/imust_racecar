@@ -10,6 +10,8 @@
 #include <sensor_msgs/LaserScan.h>
 #include <visualization_msgs/Marker.h>
 #include <vector>
+#include <math.h>
+#include <std_srvs/Empty.h>
 
 
 #define PI 3.14159265358979
@@ -80,6 +82,7 @@ private:
     double acc_limit, acc_weight;
     double back_weight;
     bool useCurvature;
+    double max_acc;
     
     bool canBack, canBackTurn;
     double backSpeed;
