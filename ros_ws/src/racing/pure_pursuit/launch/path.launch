@@ -1,0 +1,32 @@
+<launch>
+    <param name="/use_sim_time" value="true"/>
+
+    <node pkg="robot_localization" type="ukf_localization_node" name="ekf_se" clear_params="true">
+        <rosparam command="load" file="$(find pure_pursuit)/config/ekf_params.yaml" />
+    </node>
+
+    <node pkg="amcl" type="amcl" name="amcl" output="screen">
+        <rosparam command="load" file="$(find pure_pursuit)/config/amcl_params.yaml" />
+    </node>
+
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find teb1)/map/map.yaml" />
+
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find pure_pursuit)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find pure_pursuit)/config/global_costmap_params.yaml" command="load" />
+
+        <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+        <param name="planner_frequency" value="20.0" />
+        <param name="planner_patience" value="10.0" />
+
+        <param name="controller_frequency" value="0.001" />
+
+        <param name="clearing_rotation_allowed" value="false" />
+
+        <remap from="/cmd_vel" to="/teb/cmd_vel" />
+    </node>
+
+    <node name="rviz" pkg="rviz" type="rviz"
+          args="-d $(find pure_pursuit)/config/pure_pursuit.rviz" required="true"/>
+
+</launch>

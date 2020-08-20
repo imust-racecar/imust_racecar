@@ -215,7 +215,7 @@ target_link_libraries(L1Controller
 add_executable(controller
   src/L1Controller/L1Controller.h
   src/L1Controller/L1Controller.cpp
-  src/controller.cpp
+  src/main.cpp
 )
 add_dependencies(controller ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(controller
