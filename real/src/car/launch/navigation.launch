@@ -1,0 +1,14 @@
+<launch>
+
+    <include file="$(find car)/launch/include/tf.launch.xml" />
+    <include file="$(find car)/launch/include/car.launch.xml" />
+    <include file="$(find car)/launch/include/imu.launch.xml" />
+    <include file="$(find car)/launch/include/lidar.launch.xml" />
+    <include file="$(find car)/launch/include/rf2o.launch.xml" />
+    <include file="$(find car)/launch/include/robot_localization.launch.xml" />
+    <include file="$(find pure_pursuit)/launch/path.launch" />
+    <include file="$(find car)/launch/include/amcl.launch.xml" />
+    <!-- <include file="$(find car)/launch/include/move_base.launch.xml" /> -->
+    <!-- <include file="$(find car)/launch/include/L1Controller.launch.xml" /> -->
+
+</launch>

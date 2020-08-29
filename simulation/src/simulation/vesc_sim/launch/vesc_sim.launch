@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="vesc_sim" type="vesc_sim.py" name="vesc_sim" output="screen">
+    </node>
+
+    <node pkg="vesc_sim" type="vesc_sim_driver.py" name="vesc_sim_driver" output="screen">
+  </node>
+</launch>

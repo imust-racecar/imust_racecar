@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- 模型 -->
+    <include file="$(find racecar_description)/launch/racecar_rviz.launch"></include>
+    
+    <!-- 控制器 -->
+    <include file="$(find racecar_control)/launch/racecar_control.launch"></include>
+
+</launch>

@@ -1,0 +1,26 @@
+<launch>
+
+  <node pkg="car" name="car" type="car" output="screen" >
+    <param name="car_port" value="/dev/car" />
+    <param name="baud" value="115200" />
+    <param name="pulse_ratio" value="0.117" />  <!-- 0.00796051651 0.119118719 -->
+    
+    <param name="steer_middle" value="785" />
+    <param name="steer_left" value="370" />
+    <param name="steer_right" value="1200" />
+
+    <param name="left_p" value="1.0" />
+    <param name="right_p" value="1.0" />
+  </node>
+
+  <!-- <node pkg="car" name="encoder_imu_odom" type="encoder_imu_odom" output="screen">
+    <param name="publish_tf" value="false" />
+  </node> -->
+
+  <!-- <node pkg="car" name="encoder_imu_odom" type="encoder_imu_odom" output="screen">
+    <param name="publish_tf" value="false" />
+  </node> -->
+
+  <!--<node pkg="car" name="run_circle" type="run_circle" output="screen" />-->
+
+</launch>

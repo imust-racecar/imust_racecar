@@ -1,0 +1,62 @@
+<launch>
+    <param name="/use_sim_time" value="true"/>
+
+    <node pkg="robot_localization" type="ukf_localization_node" name="ekf_se" clear_params="true">
+        <rosparam command="load" file="$(find pure_pursuit)/config/ekf_params.yaml" />
+    </node>
+
+    <node pkg="amcl" type="amcl" name="amcl" output="screen">
+        <rosparam command="load" file="$(find pure_pursuit)/config/amcl_params.yaml" />
+    </node>
+
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find pure_pursuit)/map/testA.yaml" />
+
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find pure_pursuit)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find pure_pursuit)/config/global_costmap_params.yaml" command="load" />
+
+        <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+        <param name="planner_frequency" value="20.0" />
+        <param name="planner_patience" value="10.0" />
+
+        <param name="controller_frequency" value="0.001" />
+
+        <param name="clearing_rotation_allowed" value="false" />
+
+        <remap from="/cmd_vel" to="/teb/cmd_vel" />
+    </node>
+
+    <node pkg="pure_pursuit" name="pure_pursuit_controller" type="controller" respawn="false" output="screen">
+
+        <!--        speed -->
+        <param name="speed_change" value="true" />
+        <param name="base_speed" value="2.0" />
+        <param name="min_speed" value="1.0" />
+        <param name="max_speed" value="3.0" />
+        <!--        acceleration -->
+        <param name="acc_limit" value="0.3" />
+        <param name="max_acc" value="2.0" />
+        <param name="gas_weight" value="2.0" />
+        <param name="back_weight" value="2.0" />
+        <!-- lfw -->
+        <param name="lfw_change" value="false" />
+        <param name="base_lfw" value="0.8" />
+        <param name="min_lfw" value="0.6" />
+        <param name="max_lfw" value="1.2" />
+        <remap from="/cmd_vel" to="/vesc_sim/cmd_vel" />
+        <!-- control -->
+        <param name="control_frequency" value="100" />
+        <param name="path_topic" value="/path" />
+        <param name="goal_radius" value="0.6" />
+
+        <param name="is_forward" value="0" />
+
+    </node>
+
+    <node name="rviz" pkg="rviz" type="rviz"
+          args="-d $(find pure_pursuit)/config/pure_pursuit.rviz" required="true">
+
+        <remap from="/move_base_simple/goal" to="/rviz/move_base_simple/goal" />
+    </node>
+
+</launch>

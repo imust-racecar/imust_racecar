@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="teleoperation" type="keyboard_controller.py" name="keyboard_controller" output="screen">
+        <remap from="/cmd_vel" to="/car/cmd_vel" />
+    </node>
+</launch>

@@ -1,0 +1,42 @@
+<launch>
+
+    <node pkg="controller" name="L1Controller" type="controller" respawn="false" output="screen">
+        
+        <param name="controller_freq" value="40" />
+        <param name="goal_radius" value="0.3" />
+
+        <!-- speed -->
+        <param name="can_speed_change" value="true" />
+        <param name="baseSpeed" value="5.0" />
+        <param name="min_speed" value="2.5" />
+        <param name="max_speed" value="10.0" />
+        <!--<param name="rush_speed" value="5.0" />-->
+        <!--<param name="rush_dist" value="10.0" />-->
+        <param name="acc_limit" value="0.00" />
+        <param name="acc_weight" value="30.0" />
+        <param name="back_weight" value="3.0" />
+
+        <!-- angle -->
+        <param name="baseAngle" value="50.0" />
+
+        <!--  eta filter -->
+        <param name="eta_weight" value="0.9" />
+
+        <!-- pid -->
+        <param name="kp" value="1.36" /> <!-- 1.36 -->
+        <param name="kd" value="4.5" />  <!-- 4.5 -->
+        
+        <!-- Lfw -->
+        <param name="Lfw" value="1.2" />
+        <param name="can_Lfw_change" value="true" />
+        <param name="Lfw_min" value="1.0" />
+        <param name="Lfw_max" value="1.5" />
+
+        <!-- back -->
+        <param name="can_back" value="true" />
+        <param name="back_speed" value="-3.0" />
+        <param name="can_back_turn" value="false" />
+
+    </node>
+
+</launch>

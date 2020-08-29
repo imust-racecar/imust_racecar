@@ -1,0 +1,9 @@
+<launch>
+  
+  <node pkg="imu" name="imu" type="imu" output="screen">
+    <param name="port" value="/dev/imu"/>
+    <param name="model" value="100D2"/>
+    <param name="baud" value="115200"/>
+  </node>
+
+</launch>

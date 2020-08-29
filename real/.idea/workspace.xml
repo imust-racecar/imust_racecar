@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99a0e9f8-eafd-4a7c-94dd-16b87e187391" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../simulation/src/racing/pure_pursuit/map/maze.pgm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simulation/src/racing/pure_pursuit/map/maze.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simulation/src/racing/pure_pursuit/map/new_maze.pgm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simulation/src/racing/pure_pursuit/map/new_maze.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/.catkin_workspace" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/.idea/ros_ws.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/.vs/CMake Overview" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/.vs/LaserUndistortion/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/.vs/LaserUndistortion/v16/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/.vs/LaserUndistortion/v16/ipch/AutoPCH/f4e900c2fc647970/LIDARMOTIONUNDISTORTION.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/.vs/ProjectSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/.vs/slnx.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/rf2o_laser_odometry/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/rf2o_laser_odometry/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/rf2o_laser_odometry/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/rf2o_laser_odometry/include/rf2o_laser_odometry/CLaserOdometry2D.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/rf2o_laser_odometry/launch/rf2o_laser_odometry.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/rf2o_laser_odometry/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/external_packages/rf2o_laser_odometry/src/CLaserOdometry2D.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/config/amcl_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/config/costmap_common_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/config/ekf_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/config/global_costmap_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/config/local_costmap_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/config/pr2.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/config/pure_pursuit.rviz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/launch/cartographer.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/launch/path.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/launch/pure_pursuit.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/launch/utils.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/map/gazebo-maze.pgm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/map/gazebo-maze.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/map/maze.pgm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/map/maze.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/map/new_maze.pgm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/map/new_maze.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/src/library/Controller.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/src/library/MultiPathPlanner.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/src/library/Solver.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/pure_pursuit/src/utils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/config/amcl_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/config/costmap_common_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/config/ekf_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/config/global_costmap_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/config/local_costmap_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/config/teb.rviz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/config/teb_local_planner_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/launch/teb.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/map/map.pgm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/map/map.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/racing/teb1/scripts/transform_teb_vel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_control/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_control/config/racecar_control.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_control/launch/racecar_control.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_control/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/meshes/S1030-0315.dae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/urdf/racecar.gv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/urdf/racecar.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/urdf/racecar.urdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/urdf/racecar.urdf.xacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/urdf/sensors/camera.xacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/urdf/sensors/imu.xacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_description/urdf/sensors/lidar.xacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/config/amcl_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/config/costmap_common_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/config/ekf_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/config/global_costmap_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/config/local_costmap_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/config/teb_local_planner_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/launch/base.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/launch/gmapping.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/launch/navigation.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/map/map.pgm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/map/map.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/scripts/gazebo_odometry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_gazebo/scripts/wheel_velocity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_world/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_world/launch/gmapping.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_world/launch/racecar_gazebo.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_world/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_world/worlds/maze.world" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_world/worlds/racetrack.world" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/racecar_world/worlds/test.world" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/vesc_sim/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/vesc_sim/launch/vesc_sim.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/vesc_sim/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/vesc_sim/scripts/vesc_sim.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/simulation/vesc_sim/scripts/vesc_sim_driver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/teleoperation/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/teleoperation/launch/remote_control.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/teleoperation/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ros_ws/src/teleoperation/scripts/keyboard_controller.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1gb0dPBtl7fRu31CNQa7GtCrdFB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simulation" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99a0e9f8-eafd-4a7c-94dd-16b87e187391" name="Default Changelist" comment="" />
+      <created>1598368070845</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598368070845</updated>
+      <workItem from="1598368071980" duration="3048000" />
+      <workItem from="1598373742580" duration="1227000" />
+      <workItem from="1598379030464" duration="11000" />
+      <workItem from="1598379880113" duration="551000" />
+      <workItem from="1598383541907" duration="96000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="426" y="150" width="424" height="492" key="FileChooserDialogImpl" timestamp="1598383633275">
+      <screen x="0" y="27" width="1280" height="772" />
+    </state>
+    <state x="426" y="150" width="424" height="492" key="FileChooserDialogImpl/0.27.1280.772@0.27.1280.772" timestamp="1598383633275" />
+  </component>
+</project>

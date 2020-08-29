@@ -1,0 +1,14 @@
+<launch> 
+
+    <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find car)/map/test.yaml" /> -->
+
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base">
+        <param name="base_global_planner" value="global_planner/GlobalPlanner" />  
+        <rosparam file="$(find car)/param/base_global_planner_params.yaml" command="load" />
+
+        <rosparam file="$(find car)/param/global_costmap_params.yaml" command="load" /> 
+        
+        <rosparam file="$(find car)/param/move_base_params.yaml" command="load" />
+    </node>
+
+</launch>
