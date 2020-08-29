@@ -1,9 +1,0 @@
-{
-    "python.autoComplete.extraPaths": [
-        "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ],
-    "files.associations": {
-        "unordered_map": "cpp",
-        "unordered_set": "cpp"
-    }
-}
